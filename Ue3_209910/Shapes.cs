@@ -12,8 +12,6 @@ namespace Ue3_209910
         private char symbol;
         private ConsoleColor foregroundColor;
         private ConsoleColor backgroundColor;
-        private int originX;
-        private int originY;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Shapes"/> class.
@@ -22,16 +20,19 @@ namespace Ue3_209910
         /// <param name="symbol">Represents the symbol for drawing a shape.</param>
         /// <param name="foregroundColor">Represents the foregroundColor for the shape.</param>
         /// <param name="backgroundColor">Represents the backgroundColor for the shape.</param>
-        /// <param name="originX">Represents the X Coordinate (Starting point) of a shape.</param>
-        /// <param name="originY">Represents the Y Coordinate (Starting point) of a shape.</param>
-        public Shapes(char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, int originX, int originY)
+        /// <param name="origin">Represents the Coordinates (Starting point) of a shape.</param>
+        public Shapes(char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, Coordinates origin)
         {
             this.Symbol = symbol;
             this.ForegroundColor = foregroundColor;
             this.BackgroundColor = backgroundColor;
-            this.OriginX = originX;
-            this.OriginY = originY;
+            this.Origin = origin;
         }
+
+        /// <summary>
+        /// Gets or sets the coordinates of a shape.
+        /// </summary>
+        public Coordinates Origin { get; protected set; }
 
         /// <summary>
         /// Gets the symbol used to represent the shape.
@@ -83,38 +84,6 @@ namespace Ue3_209910
             protected set
             {
                 this.backgroundColor = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets the X coordinate of the shape's origin.
-        /// </summary>
-        public int OriginX
-        {
-            get
-            {
-                return this.originX;
-            }
-
-            protected set
-            {
-                this.originX = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets the Y coordinate of the shape's origin.
-        /// </summary>
-        public int OriginY
-        {
-            get
-            {
-                return this.originY;
-            }
-
-            protected set
-            {
-                this.originY = value;
             }
         }
 

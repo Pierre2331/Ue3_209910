@@ -17,7 +17,7 @@ namespace Ue3_209910
         {
             for (int row = 0; row < rectangle.Height; row++)
             {
-                Console.SetCursorPosition(rectangle.OriginX, rectangle.OriginY + row);
+                Console.SetCursorPosition(rectangle.Origin.X, rectangle.Origin.Y + row);
                 for (int col = 0; col < rectangle.Width; col++)
                 {
                     Console.ForegroundColor = rectangle.ForegroundColor;
@@ -35,7 +35,7 @@ namespace Ue3_209910
         {
             for (int row = 0; row < triangleUpperLeft.Height; row++)
             {
-                Console.SetCursorPosition(triangleUpperLeft.OriginX, triangleUpperLeft.OriginY + row);
+                Console.SetCursorPosition(triangleUpperLeft.Origin.X, triangleUpperLeft.Origin.Y + row);
                 for (int col = 0; col <= row; col++)
                 {
                     Console.ForegroundColor = triangleUpperLeft.ForegroundColor;
@@ -53,7 +53,7 @@ namespace Ue3_209910
         {
             for (int row = 0; row < triangleUpperRight.Height; row++)
             {
-                Console.SetCursorPosition(triangleUpperRight.OriginX + triangleUpperRight.Height - row, triangleUpperRight.OriginY + row);
+                Console.SetCursorPosition(triangleUpperRight.Origin.X + triangleUpperRight.Height - row, triangleUpperRight.Origin.Y + row);
                 for (int col = 0; col <= row; col++)
                 {
                     Console.ForegroundColor = triangleUpperRight.ForegroundColor;
@@ -71,7 +71,7 @@ namespace Ue3_209910
         {
             for (int row = 0; row < triangleLowerRight.Height; row++)
             {
-                Console.SetCursorPosition(triangleLowerRight.OriginX + row, triangleLowerRight.OriginY + row);
+                Console.SetCursorPosition(triangleLowerRight.Origin.X + row, triangleLowerRight.Origin.Y + row);
                 for (int col = 0; col < triangleLowerRight.Height - row; col++)
                 {
                     Console.ForegroundColor = triangleLowerRight.ForegroundColor;
@@ -89,7 +89,7 @@ namespace Ue3_209910
         {
             for (int row = 0; row < triangleLowerLeft.Height; row++)
             {
-                Console.SetCursorPosition(triangleLowerLeft.OriginX, triangleLowerLeft.OriginY + row);
+                Console.SetCursorPosition(triangleLowerLeft.Origin.X, triangleLowerLeft.Origin.Y + row);
                 for (int col = 0; col < triangleLowerLeft.Height - row; col++)
                 {
                     Console.ForegroundColor = triangleLowerLeft.ForegroundColor;

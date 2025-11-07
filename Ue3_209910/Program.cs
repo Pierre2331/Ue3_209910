@@ -14,6 +14,8 @@ namespace Ue3_209910
         /// </summary>
         private static void Main()
         {
+            Console.SetWindowSize(200, 200);
+            // Console.SetBufferSize(120, 40);
             Console.CursorVisible = false;
             Console.Clear();
 

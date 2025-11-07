@@ -18,12 +18,11 @@ namespace Ue3_209910
         /// <param name="symbol">Represents the symbol for drawing the rectangle.</param>
         /// <param name="foregroundColor">Represents the foregroundColor for the rectangle.</param>
         /// <param name="backgroundColor">Represents the backgroundColor for the rectangle.</param>
-        /// <param name="originX">Represents the X Coordinate (Starting point) of the rectangle.</param>
-        /// <param name="originY">Represents the Y Coordinate (Starting point) of the rectangle.</param>
+        /// <param name="origin">Represents the Coordinates (Starting point) of the rectangle.</param>
         /// <param name="height">Represent the height of the rectangle.</param>
         /// <param name="width">Represents the width of the rectangle.</param>
-        public Rectangle(char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, int originX, int originY, int height, int width)
-            : base(symbol, foregroundColor, backgroundColor, originX, originY)
+        public Rectangle(char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, Coordinates origin, int height, int width)
+            : base(symbol, foregroundColor, backgroundColor, origin)
         {
             this.Height = height;
             this.Width = width;

@@ -18,8 +18,8 @@ namespace Ue3_209910
         /// <param name="originX">Represents the X Coordinate (Starting point) of the triangle.</param>
         /// <param name="originY">Represents the Y Coordinate (Starting point) of the triangle.</param>
         /// <param name="height">Represent the height of the triangle.</param>
-        public TriangleUpperRight(int height, char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, int originX, int originY)
-            : base(height, symbol, foregroundColor, backgroundColor, originX, originY)
+        public TriangleUpperRight(int height, char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, Coordinates origin)
+            : base(height, symbol, foregroundColor, backgroundColor, origin)
         {
         }
 

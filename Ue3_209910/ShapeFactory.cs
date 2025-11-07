@@ -17,17 +17,18 @@ namespace Ue3_209910
         /// <returns>Rectangle.</returns>
         public Rectangle CreateRectangle()
         {
-            int width = this.random.Next(3, 15);
-            int height = this.random.Next(2, 10);
+            int width = this.random.Next(3, 40);
+            int height = this.random.Next(2, 40);
             int originX = this.random.Next(0, Math.Max(1, Console.WindowWidth - width));
             int originY = this.random.Next(0, Math.Max(1, Console.WindowHeight - height));
+            Coordinates coordinates = new Coordinates(originX, originY);
 
             char symbol = this.GetRandomChar();
 
             ConsoleColor foregroundColor = this.GetRandomColor();
             ConsoleColor backgroundColor = this.GetRandomColorDifferent(foregroundColor);
 
-            return new Rectangle(symbol, foregroundColor, backgroundColor, originX, originY, height, width);
+            return new Rectangle(symbol, foregroundColor, backgroundColor, coordinates, height, width);
         }
 
         /// <summary>
@@ -39,13 +40,14 @@ namespace Ue3_209910
             int height = this.random.Next(2, 10);
             int originX = this.random.Next(0, Math.Max(1, Console.WindowWidth - height));
             int originY = this.random.Next(0, Math.Max(1, Console.WindowHeight - height));
+            Coordinates coordinates = new Coordinates(originX, originY);
 
             char symbol = this.GetRandomChar();
 
             ConsoleColor foregroundColor = this.GetRandomColor();
             ConsoleColor backgroundColor = this.GetRandomColorDifferent(foregroundColor);
 
-            return new TriangleUpperLeft(height, symbol, foregroundColor, backgroundColor, originX, originY);
+            return new TriangleUpperLeft(height, symbol, foregroundColor, backgroundColor, coordinates);
         }
 
         /// <summary>
@@ -57,13 +59,14 @@ namespace Ue3_209910
             int height = this.random.Next(2, 10);
             int originX = this.random.Next(0, Math.Max(1, Console.WindowWidth - height));
             int originY = this.random.Next(0, Math.Max(1, Console.WindowHeight - height));
+            Coordinates coordinates = new Coordinates(originX, originY);
 
             char symbol = this.GetRandomChar();
 
             ConsoleColor foregroundColor = this.GetRandomColor();
             ConsoleColor backgroundColor = this.GetRandomColorDifferent(foregroundColor);
 
-            return new TriangleUpperRight(height, symbol, foregroundColor, backgroundColor, originX, originY);
+            return new TriangleUpperRight(height, symbol, foregroundColor, backgroundColor, coordinates);
         }
 
         /// <summary>
@@ -75,13 +78,14 @@ namespace Ue3_209910
             int height = this.random.Next(2, 10);
             int originX = this.random.Next(0, Math.Max(1, Console.WindowWidth - height));
             int originY = this.random.Next(0, Math.Max(1, Console.WindowHeight - height));
+            Coordinates coordinates = new Coordinates(originX, originY);
 
             char symbol = this.GetRandomChar();
 
             ConsoleColor foregroundColor = this.GetRandomColor();
             ConsoleColor backgroundColor = this.GetRandomColorDifferent(foregroundColor);
 
-            return new TriangleLowerLeft(height, symbol, foregroundColor, backgroundColor, originX, originY);
+            return new TriangleLowerLeft(height, symbol, foregroundColor, backgroundColor, coordinates);
         }
 
         /// <summary>
@@ -93,13 +97,14 @@ namespace Ue3_209910
             int height = this.random.Next(2, 10);
             int originX = this.random.Next(0, Math.Max(1, Console.WindowWidth - height));
             int originY = this.random.Next(0, Math.Max(1, Console.WindowHeight - height));
+            Coordinates coordinates = new Coordinates(originX, originY);
 
             char symbol = this.GetRandomChar();
 
             ConsoleColor foregroundColor = this.GetRandomColor();
             ConsoleColor backgroundColor = this.GetRandomColorDifferent(foregroundColor);
 
-            return new TriangleLowerRight(height, symbol, foregroundColor, backgroundColor, originX, originY);
+            return new TriangleLowerRight(height, symbol, foregroundColor, backgroundColor, coordinates);
         }
 
         /*

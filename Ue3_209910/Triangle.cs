@@ -17,11 +17,10 @@ namespace Ue3_209910
         /// <param name="symbol">Represents the symbol for drawing the triangle.</param>
         /// <param name="foregroundColor">Represents the foregroundColor for the triangle.</param>
         /// <param name="backgroundColor">Represents the backgroundColor for the triangle.</param>
-        /// <param name="originX">Represents the X Coordinate (Starting point) of the triangle.</param>
-        /// <param name="originY">Represents the Y Coordinate (Starting point) of the triangle.</param>
+        /// <param name="origin">Represents the Coordinates (Starting point) of the triangle.</param>
         /// <param name="height">Represent the height of the triangle.</param>
-        public Triangle(int height, char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, int originX, int originY)
-            : base(symbol, foregroundColor, backgroundColor, originX, originY)
+        public Triangle(int height, char symbol, ConsoleColor foregroundColor, ConsoleColor backgroundColor, Coordinates origin)
+            : base(symbol, foregroundColor, backgroundColor, origin)
         {
             this.Height = height;
         }
@@ -36,7 +35,7 @@ namespace Ue3_209910
                 return this.height;
             }
 
-            protected set
+            private set
             {
                 this.height = value;
             }
